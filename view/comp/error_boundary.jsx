@@ -8,31 +8,31 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-const bodyParser = require('body-parser');
-const path = require('path')
-const favicon = require('serve-favicon');
+import React from 'react'
 
-class Middleware {
-  constructor(express) {
-    this.express = express
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  async init() {
-    this.express.use(bodyParser.json());
-    this.express.use(bodyParser.urlencoded({ extended: false }));
-    this.express.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
-
-    this.initErrors()
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
 
-  initErrors() {
-    this.express.use(async (err, req, res, next) => {
-      /* This will be the first error handler to be called */
-      console.error("Unexpected error")
-      return next(err)
-    })
+  componentDidCatch(error, errorInfo) {
+
   }
 
+  render() {
+    if (this.state.hasError) {
+      return <div>
+        <p>Something went wrong.</p>
+      </div>
+    }
+
+    return this.props.children;
+  }
 }
 
-module.exports = Middleware
+export default ErrorBoundary

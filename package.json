@@ -1,12 +1,13 @@
 {
-  "name": "nextjs_express_template",
+  "name": "reactjs_koans",
   "version": "1.0.0",
-  "description": "Template for a NextJS+ExpressJS web app",
+  "description": "Edge case examples and tests for React",
   "main": "index.js",
-  "repository": "git@github.com:alexey-dc/nextjs_express_template.git",
-  "author": "alexey-dc <alexey.chernikov.it@gmail.com>",
-  "license": "MIT",
+  "repository": "git@github.com:alexey-dc/react_koans.git",
+  "author": "alexey-dc <alexey.opensource@gmail.com>",
+  "license": "AGPL",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "next": "^11.0.0",

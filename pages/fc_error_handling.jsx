@@ -11,13 +11,40 @@
 import React from 'react'
 import Layout from '../view/layout.jsx'
 
+import views from '../view/fc_error_handling/_fc_error_handling.jsx'
+
+const Spaced = (props) => {
+  return <div style={{margin: "1vh 1vw 1vh 1vw"}}>
+    {props.children}
+  </div>
+}
+
 export default function Main(props) {
-  return <Layout title="React Koans">
-    <h1> React Koans </h1>
-    <p> This is a collection of React Koans: concise examples that showcase edge case behavior. </p>
-    <h1> Examples </h1>
-    <ul>
-      <li> <a href="/fc_error_handling"> Functional Component error handling </a> </li>
-    </ul>
+  return <Layout backPath="/">
+    <h1>Error handling in functional components</h1>
+    <div className="f-row f-wrap">
+      <Spaced>
+        <views.UnhandledError/>
+      </Spaced>
+      <Spaced>
+        <views.BasicErrorBoundary/>
+      </Spaced>
+      <Spaced>
+        <views.UseEffectError/>
+      </Spaced>
+
+      <Spaced>
+        <views.UseEffectErrorBoundary/>
+      </Spaced>
+      <Spaced>
+        <views.PromiseErrorBoundary/>
+      </Spaced>
+      <Spaced>
+        <views.PromiseErrorBoundaryUseEffect/>
+      </Spaced>
+      <Spaced>
+        <views.PromiseErrorHandling/>
+      </Spaced>
+    </div>
   </Layout>
 }

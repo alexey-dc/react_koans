@@ -1,3 +1,98 @@
+/*
+  This file is part of ReactKoans https://github.com/alexey-dc/react_koans.
+
+  ReactKoans is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+  ReactKoans is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+  You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
+*/
+
 body {
-  font-size: 36px;
+  font-size: 2.3vh;
+}
+
+ul {
+  padding: 0 0 0 0;
+  margin:  0 0 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  margin: -0.3vmin 0.5vmin 0 0;
+  width: 0.6vmin;
+  height: 0.6vmin;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.card {
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
+  padding: 2vh 2vw 2vh 2vw;
+  border-radius: 6px;
+}
+
+.red {
+  color: #BB2210;
+}
+
+.green {
+  color: #10BB22;
+}
+
+.button {
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  font-size: 2.5vh;
+  padding: 1vh 1vw 1vh 1vw;
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  box-shadow: inset 0px 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+.f-row {
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+}
+
+.f-col {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-j-center {
+  justify-content: center;
+}
+
+.f-j-end {
+  justify-content: flex-end;
+}
+
+.f-j-flex-end {
+  justify-content: flex-end;
+}
+
+.f-j-space-around {
+  justify-content: space-around;
+}
+
+.f-j-space-between {
+  justify-content: space-between;
 }

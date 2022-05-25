@@ -8,31 +8,20 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-const bodyParser = require('body-parser');
-const path = require('path')
-const favicon = require('serve-favicon');
+import UnhandledError from './unhandled_error.jsx'
+import BasicErrorBoundary from './basic_error_boundary.jsx'
+import PromiseErrorBoundary from './promise_error_boundary.jsx'
+import PromiseErrorBoundaryUseEffect from './promise_error_boundary_use_effect.jsx'
+import UseEffectError from './use_effect_error.jsx'
+import UseEffectErrorBoundary from './use_effect_error_boundary.jsx'
+import PromiseErrorHandling from './promise_error_handling.jsx'
 
-class Middleware {
-  constructor(express) {
-    this.express = express
-  }
-
-  async init() {
-    this.express.use(bodyParser.json());
-    this.express.use(bodyParser.urlencoded({ extended: false }));
-    this.express.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
-
-    this.initErrors()
-  }
-
-  initErrors() {
-    this.express.use(async (err, req, res, next) => {
-      /* This will be the first error handler to be called */
-      console.error("Unexpected error")
-      return next(err)
-    })
-  }
-
+export default {
+  UnhandledError,
+  BasicErrorBoundary,
+  PromiseErrorBoundary,
+  PromiseErrorBoundaryUseEffect,
+  PromiseErrorHandling,
+  UseEffectError,
+  UseEffectErrorBoundary,
 }
-
-module.exports = Middleware

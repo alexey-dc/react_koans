@@ -8,31 +8,36 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-const bodyParser = require('body-parser');
-const path = require('path')
-const favicon = require('serve-favicon');
+import React from 'react'
 
-class Middleware {
-  constructor(express) {
-    this.express = express
+const ErrorTrigger = () => {
+  const [isError, setIsError] = React.useState(false)
+  const toggleError = React.useCallback(() => {
+    setIsError(!isError)
+  })
+
+  if(isError) {
+    throw "Basic error in component"
   }
 
-  async init() {
-    this.express.use(bodyParser.json());
-    this.express.use(bodyParser.urlencoded({ extended: false }));
-    this.express.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
-
-    this.initErrors()
-  }
-
-  initErrors() {
-    this.express.use(async (err, req, res, next) => {
-      /* This will be the first error handler to be called */
-      console.error("Unexpected error")
-      return next(err)
-    })
-  }
-
+  return <div
+    className="button"
+    onClick={toggleError}
+  >
+    Throw Error
+  </div>
 }
 
-module.exports = Middleware
+const UnhandledError = () => {
+  return <div className="card">
+    <ul style={{paddingBottom: "2vh"}}>
+      <li> Throw inside component </li>
+      <li> No error boundary </li>
+      <li className="red"> Destroys page </li>
+      <li className="red"> Only recovery is to refresh </li>
+    </ul>
+    <ErrorTrigger/>
+  </div>
+}
+
+export default UnhandledError
