@@ -14,6 +14,9 @@ import ErrorBoundary from '../comp/error_boundary.jsx'
 const someDistantAsyncMethod = async () => {
   /*
     E.g. this could be an API call done through an application-level http client
+    that is shared among many, many components.
+
+    E.g. If the network is down, that could trigger an exception.
   */
   throw "Error inside promise"
 }
@@ -42,7 +45,7 @@ const ErrorTrigger = () => {
 const PromiseErrorBoundary = () => {
   return <div className="card f-col f-j-space-between">
     <ul style={{paddingBottom: "2vh"}}>
-      <li> Throw in promise in component </li>
+      <li> <a target="blank" title="Throw in promise in component with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_boundary.jsx"> Throw in promise in component </a> </li>
       <li> Error boundary </li>
       <li> Same as w/o error boundary </li>
       <li> Does not destroy the view </li>

@@ -15,6 +15,7 @@ import PromiseErrorBoundaryUseEffect from './promise_error_boundary_use_effect.j
 import UseEffectError from './use_effect_error.jsx'
 import UseEffectErrorBoundary from './use_effect_error_boundary.jsx'
 import PromiseErrorHandling from './promise_error_handling.jsx'
+import PromiseReactErrorBoundary from './promise_react_error_boundary.jsx'
 
 export default {
   UnhandledError,
@@ -22,6 +23,7 @@ export default {
   PromiseErrorBoundary,
   PromiseErrorBoundaryUseEffect,
   PromiseErrorHandling,
+  PromiseReactErrorBoundary,
   UseEffectError,
   UseEffectErrorBoundary,
 }

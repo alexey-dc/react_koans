@@ -12,7 +12,7 @@ import React from 'react'
 import Head from 'next/head'
 
 const renderBack = (backPath) => {
-  return <a href={backPath}> Back </a>
+  return <a style={{position: "fixed", fontSize: "3vh"}} href={backPath}> Back </a>
 }
 
 export default class Layout extends React.Component {
@@ -36,8 +36,7 @@ export default class Layout extends React.Component {
       </Head>
       {this.props.backPath ? renderBack(this.props.backPath) : "" }
       <div style={{
-        width: "70%",
-        margin: "auto",
+        marginLeft: "100px",
         paddingTop: "16px"
       }}>
         {this.props.children}

@@ -29,9 +29,9 @@ const ErrorTrigger = () => {
 }
 
 const UnhandledError = () => {
-  return <div className="card">
+  return <div className="card f-col f-j-space-between">
     <ul style={{paddingBottom: "2vh"}}>
-      <li> Throw inside component </li>
+      <li> <a target="blank" title="Unhandled error source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/unhandled_error.jsx"> Throw inside component </a> </li>
       <li> No error boundary </li>
       <li className="red"> Destroys page </li>
       <li className="red"> Only recovery is to refresh </li>

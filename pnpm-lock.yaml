@@ -7,6 +7,7 @@ specifiers:
   next: ^11.0.0
   react: ^17.0.2
   react-dom: ^17.0.2
+  react-error-boundary: ^3.1.4
   serve-favicon: ^2.5.0
 
 dependencies:
@@ -16,6 +17,7 @@ dependencies:
   next: 11.1.4_sfoxds7t5ydpegc3knd667wn6m
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
+  react-error-boundary: 3.1.4_react@17.0.2
   serve-favicon: 2.5.0
 
 packages:
@@ -1768,6 +1770,16 @@ packages:
       object-assign: 4.1.1
       react: 17.0.2
       scheduler: 0.20.2
+    dev: false
+
+  /react-error-boundary/3.1.4_react@17.0.2:
+    resolution: {integrity: sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13.1'
+    dependencies:
+      '@babel/runtime': 7.15.3
+      react: 17.0.2
     dev: false
 
   /react-is/17.0.2:

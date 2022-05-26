@@ -26,7 +26,7 @@ this.server = httpServer(this.express)
 ## Https
 This project is set up to run HTTPS. The instructions to set up your certificates in localhost are below.
 
-It's recommended to use pnpm with this project, as `pnpm.lock` is commited: `pnpm install`. See https://classic.pnpmpkg.com/en/docs/install
+It's recommended to use pnpm with this project, as `pnpm-lock.yaml` is commited: `pnpm install`. See https://classic.pnpmpkg.com/en/docs/install (or do `npm install -g pnpm`)
 
 The project relies on the `dotenv` package, so you'll need to create a `.env` file at the root of this project and add some environment variables into it. Your .env file should env up looking something like this - be sure to follow the instructions in the next sextion for setting up the SSL certificates:
 

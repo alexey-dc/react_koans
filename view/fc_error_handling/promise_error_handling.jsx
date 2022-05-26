@@ -14,12 +14,17 @@ import EventBus from '../../frontend_lib/event_bus.js'
 
 const someDistantAsyncMethod = async () => {
   /*
-    E.g. this could be an API call done through an application-level http client.
+    E.g. this could be an API call done through an application-level http client
+    that is shared among many, many components.
+
     E.g. If the network is down, that could trigger an exception.
+
     If we need to handle that in just one hook - that's fine.
     If we have 100 API calls in the codebase - we may not want to duplicate code.
+
+    This examples shows a way to consolidate that error handling.
   */
-  throw "Error inside promise in useEffect"
+  throw "Handled error inside promise in useEffect"
 }
 
 const triggerErrorWrapped = async () => {
@@ -59,7 +64,7 @@ const ErrorTrigger = () => {
   }, [isError])
 
   return <div>
-    {errorMessage ? <p style={{marginTop: "0px"}} className="red"> {errorMessage} </p> : ""}
+    {errorMessage ? <p style={{marginTop: "0px", boxShadow: "0px 0px 4px 1px rgba(0,0,0,0.1)", padding: "4px"}} className="green"> {errorMessage} </p> : ""}
     <div
       className="button"
       onClick={toggleError}
@@ -72,14 +77,16 @@ const ErrorTrigger = () => {
 const PromiseErrorHandling = () => {
   return <div className="card f-col f-j-space-between">
     <ul style={{paddingBottom: "2vh"}}>
-      <li> Throw inside promise in useEffect </li>
+      <li> <a target="blank" title="Throw in promise in useEffect with global error handling source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_handling.jsx"> Throw inside promise in useEffect </a> </li>
       <li> Global event system </li>
       <li> Allows generic error handling </li>
-      <li> Works best with a top-level catch </li>
+      <li> Console output self-managed </li>
       <li className="green"> Error fully handled 👌 </li>
-      <li className="green"> No stray console output 👌 </li>
+      <li className="green"> Works well to DRY repeat errors </li>
+      <li className="green"> React handles from any JS/outside components </li>
+      <li className="green"> I.e. non-react code can update react code </li>
+      <li className="red"> Too complex for 1-off errors </li>
       <li className="red"> Completely self-managed </li>
-      <li className="red"> 1-off errors are best handled in the hook </li>
     </ul>
     <ErrorBoundary>
       <ErrorTrigger/>
