@@ -10,17 +10,13 @@
 
 import React from 'react'
 import ErrorBoundary from '../comp/error_boundary.jsx'
-// see https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/koan_api.js
-import KoanApi from '../../frontend_lib/koan_api.js'
 
 const someDistantAsyncMethod = async () => {
   /*
-    A common example of an async failure inside of a hook is an API call
-    done through an application-level http client that is shared among many components.
-
-    E.g. If the network is down, that could trigger an exception.
+    It may not be very common to do async calls inside the body of a component method,
+    but we'll investigate what happens regardless.
   */
-  return await KoanApi.instance.alwaysError("Example error inside promise")
+  throw "Example error inside promise"
 }
 
 
