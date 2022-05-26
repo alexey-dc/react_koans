@@ -1,8 +1,11 @@
 # About
 This is a set of examples/tests of react edge cases. In part inspired by http://rubykoans.com/
 
+# Demo
+A live demo is hosted at https://react.alexey-dc.com/
+
 # License
-I licensed this work as (AGPL)[https://www.gnu.org/licenses/agpl-3.0.en.html] - i.e. I want it to stay open source if any modifications or additions are made, and any distributions should have attribution. I'm aware of the criticisms of copyleft licenses, but in this case I don't think of this code as the foundation for any application code; I think preserving the openness of it is more important.
+I licensed this work as [AGPL](https://www.gnu.org/licenses/agpl-3.0.en.html) - i.e. I want it to stay open source if any modifications or additions are made, and any distributions should have attribution. I'm aware of the criticisms of copyleft licenses, but in this case I don't think of this code as the foundation for any application code; I think preserving the openness of it is more important.
 
 If you do wish to use a part of the code here in a commercial or closed-source project, or avoid attribution - I can be reached at alexey.opensource@gmail.com - perhaps we can work something out. I'm also open to being convinced that a different license is more appropriate.
 
