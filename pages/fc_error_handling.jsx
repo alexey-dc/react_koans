@@ -22,6 +22,7 @@ const Spaced = (props) => {
 export default function Main(props) {
   return <Layout backPath="/">
     <h1>Error handling in functional components</h1>
+    <div style={{marginBottom: "5vh"}}> </div>
     <h2> Problem 1: errors in components w/o promises </h2>
     <p> Errors thrown in components will cause the page to crash. React has a standard solution to this: <a href="https://reactjs.org/docs/error-boundaries.html"> Error Boundaries </a> </p>
     <div className="f-row f-wrap card_row">
@@ -38,6 +39,7 @@ export default function Main(props) {
         <views.UseEffectErrorBoundary/>
       </Spaced>
     </div>
+    <div style={{marginBottom: "5vh"}}> </div>
     <h2> Problem 2: errors in components in promises  </h2>
     <p> However, Error Boundaries do not work for async functions/promises. </p>
     <div className="f-row f-wrap card_row">

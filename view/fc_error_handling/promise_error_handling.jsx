@@ -83,7 +83,7 @@ const PromiseErrorHandling = () => {
       <li> Console output self-managed </li>
       <li className="green"> Error fully handled 👌 </li>
       <li className="green"> Works well to DRY repeat errors </li>
-      <li className="green"> React handles from any JS/outside components </li>
+      <li className="green"> React handles errors from any JS/outside components </li>
       <li className="green"> I.e. non-react code can update react code </li>
       <li className="red"> Too complex for 1-off errors </li>
       <li className="red"> Completely self-managed </li>
