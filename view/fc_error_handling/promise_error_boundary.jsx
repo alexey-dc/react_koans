@@ -10,6 +10,7 @@
 
 import React from 'react'
 import ErrorBoundary from '../comp/error_boundary.jsx'
+// see https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/koan_api.js
 import KoanApi from '../../frontend_lib/koan_api.js'
 
 const someDistantAsyncMethod = async () => {

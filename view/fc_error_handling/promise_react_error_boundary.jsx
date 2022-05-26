@@ -11,6 +11,7 @@
 import React from 'react'
 // https://stackoverflow.com/questions/64233408/how-to-use-useerrorhandler-in-react
 import { useErrorHandler, ErrorBoundary } from 'react-error-boundary';
+// see https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/koan_api.js
 import KoanApi from '../../frontend_lib/koan_api.js'
 
 const someDistantAsyncMethod = async () => {
