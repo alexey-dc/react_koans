@@ -11,11 +11,12 @@
 import React from 'react'
 import ErrorBoundary from '../comp/error_boundary.jsx'
 import EventBus from '../../frontend_lib/event_bus.js'
+import KoanApi from '../../frontend_lib/koan_api.js'
 
 const someDistantAsyncMethod = async () => {
   /*
-    E.g. this could be an API call done through an application-level http client
-    that is shared among many, many components.
+    A common example of an async failure inside of a hook is an API call
+    done through an application-level http client that is shared among many components.
 
     E.g. If the network is down, that could trigger an exception.
 
@@ -24,7 +25,7 @@ const someDistantAsyncMethod = async () => {
 
     This examples shows a way to consolidate that error handling.
   */
-  throw "Handled error inside promise in useEffect"
+  return await KoanApi.instance.alwaysError("Globally handled error")
 }
 
 const triggerErrorWrapped = async () => {

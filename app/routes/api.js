@@ -24,6 +24,14 @@ const http = {
   }
 }
 
+function parseUriParams(receivedParams) {
+  const result = {}
+  for(const param of receivedParams) {
+    result[param] = decodeURIComponent(receivedParams[param])
+  }
+  return result
+}
+
 
 class Api {
   constructor(express) {
@@ -32,7 +40,9 @@ class Api {
 
   init() {
     this.express.get("/always_error", (req, res) => {
-      http.error(req, res, ERRORS.UNEXPECTED_ERROR, "This endpoint always returns an error")
+      // const params = parseUriParams(req.query)
+      const message = req.query.message || "This endpoint always returns an error"
+      http.error(req, res, ERRORS.UNEXPECTED_ERROR, message)
     })
   }
 

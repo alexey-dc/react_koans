@@ -9,7 +9,9 @@
 */
 
 import EventBus from './event_bus.js'
+import HttpClient from './http_client.js'
 
 export default {
   EventBus,
+  HttpClient,
 }

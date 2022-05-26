@@ -11,15 +11,16 @@
 import React from 'react'
 // https://stackoverflow.com/questions/64233408/how-to-use-useerrorhandler-in-react
 import { useErrorHandler, ErrorBoundary } from 'react-error-boundary';
+import KoanApi from '../../frontend_lib/koan_api.js'
 
 const someDistantAsyncMethod = async () => {
   /*
-    E.g. this could be an API call done through an application-level http client
-    that is shared among many, many components.
+    A common example of an async failure inside of a hook is an API call
+    done through an application-level http client that is shared among many components.
 
     E.g. If the network is down, that could trigger an exception.
   */
-  throw "Error caught by ErrorBoundary"
+  return await KoanApi.instance.alwaysError("Error caught by ErrorBoundary")
 }
 
 function ErrorFallback({error, resetErrorBoundary}) {
