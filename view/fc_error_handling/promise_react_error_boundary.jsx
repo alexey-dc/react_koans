@@ -49,7 +49,7 @@ const ErrorTrigger = () => {
     if(isError) {
       someDistantAsyncMethod().then(() => {
         console.log("<handle success here>")
-        console.log("Wouldn't in this example, since we always throw.")
+        console.log("Wouldn't happen in this example, since we always throw.")
       }, (error) => {
         handleError(error)
       })
