@@ -78,7 +78,7 @@ const PromiseErrorHandling = () => {
   return <div className="card f-col f-j-space-between">
     <a target="blank" title="Throw in promise in useEffect with global error handling source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_handling.jsx"> Throw inside promise in useEffect </a>
     <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
-      <li> <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/event_bus.js#L17">Global event system</a> </li>
+      <li> <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/event_bus.js#L17"> Global event system</a> </li>
       <li> Allows generic error handling </li>
       <li> Console output self-managed </li>
       <li className="green"> Error fully handled 👌 </li>
