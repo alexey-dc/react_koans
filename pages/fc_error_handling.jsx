@@ -22,7 +22,9 @@ const Spaced = (props) => {
 export default function Main(props) {
   return <Layout backPath="/">
     <h1>Error handling in functional components</h1>
-    <div style={{marginBottom: "5vh"}}> </div>
+    <p> This examples walks through a series of different situations in which an error may be thrown, explores what happens, and what can be done about it. </p>
+    <p> Each card has a link to its source code (on GitHub) at the top, as well as a summary of the setup. </p>
+    <div style={{marginBottom: "4vh"}}> </div>
     <h2> Problem 1: errors in components w/o promises </h2>
     <p> Errors thrown in components will cause the page to crash. React has a standard solution to this: <a href="https://reactjs.org/docs/error-boundaries.html"> Error Boundaries </a> </p>
     <div className="f-row f-wrap card_row">
@@ -63,7 +65,7 @@ export default function Main(props) {
       </Spaced>
     </div>
     <h2> Conclusion </h2>
-    <p> The hard problem in handling errors in functional components in react is dealing with errors from async functions/promises. </p>
+    <p> The hard problem in handling errors in functional components in React is dealing with errors from async functions/promises. </p>
     <p> Two solutions are presented: via <a href="https://www.npmjs.com/package/react-error-boundary" target="blank">react-error-boundary</a> and via a global event mechanism. </p>
     <p> <b>react-error-boundary</b> can be a good way to take advantage of a standard globl error handling mechanism on a per-component level. </p>
     <p> However, for general-purpose tools (e.g. an internal http client that wraps a backend API) that exist outside of components, or that would benefit from not having to think about error handling each time - it may make sense to opt for a global event mechanism to tie the world of react with the outside world.</p>

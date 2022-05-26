@@ -31,8 +31,8 @@ const ErrorTrigger = () => {
 
 const BasicErrorBoundary = () => {
   return <div className="card f-col f-j-space-between">
-    <ul style={{paddingBottom: "2vh"}}>
-      <li> <a target="blank" title="Basic error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/basic_error_boundary.jsx"> Throw inside component </a> </li>
+    <a target="blank" title="Basic error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/basic_error_boundary.jsx"> Throw inside component </a>
+    <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> Error boundary </li>
       <li> Prints to console in development </li>
       <li className="green"> Error fully handled 👌 </li>

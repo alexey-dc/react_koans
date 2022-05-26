@@ -44,8 +44,8 @@ const ErrorTrigger = () => {
 
 const PromiseErrorBoundary = () => {
   return <div className="card f-col f-j-space-between">
-    <ul style={{paddingBottom: "2vh"}}>
-      <li> <a target="blank" title="Throw in promise in component with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_boundary.jsx"> Throw in promise in component </a> </li>
+    <a target="blank" title="Throw in promise in component with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_boundary.jsx"> Throw in promise in component </a>
+    <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> Error boundary </li>
       <li> Same as w/o error boundary </li>
       <li> Does not destroy the view </li>

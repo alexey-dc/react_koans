@@ -46,8 +46,8 @@ const ErrorTrigger = () => {
 
 const PromiseErrorBoundaryUseEffect = () => {
   return <div className="card f-col f-j-space-between">
-    <ul style={{paddingBottom: "2vh"}}>
-      <li> <a target="blank" title="Throw in promise in useEffect with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_boundary_use_effect.jsx"> Throw inside promise in useEffect </a> </li>
+    <a target="blank" title="Throw in promise in useEffect with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_boundary_use_effect.jsx"> Throw inside promise in useEffect </a>
+    <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> Error boundary </li>
       <li> Same as w/o error boundary </li>
       <li> Does not destroy the view </li>

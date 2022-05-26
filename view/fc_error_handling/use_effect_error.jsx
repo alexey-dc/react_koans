@@ -34,8 +34,8 @@ const ErrorTrigger = () => {
 
 const UseEffectError = () => {
   return <div className="card f-col f-j-space-between">
-    <ul style={{paddingBottom: "2vh"}}>
-      <li> <a target="blank" title="Unhandled throw in useEffect source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/use_effect_error.jsx"> Throw in useEffect </a> </li>
+    <a target="blank" title="Unhandled throw in useEffect source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/use_effect_error.jsx"> Throw in useEffect </a>
+    <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> No error boundary </li>
       <li className="red"> Destroys page </li>
       <li className="red"> Only recovery is to refresh </li>

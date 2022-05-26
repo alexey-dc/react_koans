@@ -8,6 +8,13 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
+:root {
+  --clr-blue: #1022BB;
+  --clr-blue-bold: #0511AA;
+  --clr-red: #BB2210;
+  --clr-green: #10BB22;
+}
+
 body {
   font-size: 2.1vh;
 }
@@ -35,6 +42,23 @@ a {
   padding:  0 0 0 0;
 }
 
+a {
+  color: var(--clr-blue);
+  text-decoration: underline;
+  text-decoration-thickness: .07em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--clr-blue-bold);
+  text-decoration-thickness: .14em;
+}
+
+a:visited {
+
+}
+
+
 .card {
   box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.3);
   padding: 2vh 2vw 2vh 2vw;
@@ -51,11 +75,11 @@ a {
 
 
 .red {
-  color: #BB2210;
+  color: var(--clr-red)
 }
 
 .green {
-  color: #10BB22;
+  color: var(--clr-green)
 }
 
 .button {

@@ -34,8 +34,8 @@ const ErrorTrigger = () => {
 
 const UseEffectErrorBoundary = () => {
   return <div className="card f-col f-j-space-between">
-    <ul style={{paddingBottom: "2vh"}}>
-      <li> <a target="blank" title="Throw in useEffect with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/use_effect_error_boundary.jsx"> Throw in useEffect </a> </li>
+    <a target="blank" title="Throw in useEffect with error boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/use_effect_error_boundary.jsx"> Throw in useEffect </a>
+    <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> Error boundary </li>
       <li> Prints to console in development </li>
       <li className="green"> Error fully handled 👌 </li>

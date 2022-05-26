@@ -67,8 +67,8 @@ const ErrorTrigger = () => {
 
 const PromiseReactErrorBoundary = () => {
   return <div className="card f-col f-j-space-between">
-    <ul style={{paddingBottom: "2vh"}}>
-      <li> <a target="blank" title="Throw in promise in useEffect with react-error-boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_react_error_boundary.jsx"> Throw inside promise in useEffect </a> </li>
+    <a target="blank" title="Throw in promise in useEffect with react-error-boundary source code" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_react_error_boundary.jsx"> Throw inside promise in useEffect </a>
+    <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> Uses an npm package </li>
       <li> See <a href="https://www.npmjs.com/package/react-error-boundary" target="blank">react-error-boundary</a> (vs <a href="https://reactjs.org/docs/error-boundaries.html" target="blank">native react</a>) </li>
       <li> Prints to console in development </li>
