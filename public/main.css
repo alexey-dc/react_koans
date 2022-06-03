@@ -10,7 +10,7 @@
 
 :root {
   --clr-blue: #1022BB;
-  --clr-blue-bold: #0511AA;
+  --clr-dirty-green: #224400;
   --clr-red: #BB2210;
   --clr-green: #10BB22;
 }
@@ -37,6 +37,11 @@ li::before {
   background-color: currentColor;
 }
 
+.large_li li {
+  margin-bottom: 1vh;
+  font-size: 3vh;
+}
+
 a {
   margin:  0 0 0 0;
   padding:  0 0 0 0;
@@ -50,7 +55,7 @@ a {
 }
 
 a:hover {
-  color: var(--clr-blue-bold);
+  color: var(--clr-dirty-green);
   text-decoration-thickness: .14em;
 }
 
@@ -88,6 +93,18 @@ a:visited {
   font-size: 2.5vh;
   padding: 1vh 1vw 1vh 1vw;
   text-align: center;
+
+  /*
+    Prevent text selection
+    https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting
+  */
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .button:hover {

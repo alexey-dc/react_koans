@@ -20,7 +20,7 @@ const Spaced = (props) => {
 }
 
 export default function Main(props) {
-  return <Layout backPath="/">
+  return <Layout title="React Error handling" backPath="/">
     <h1>Error handling in functional components</h1>
     <p> This examples walks through a series of different situations in which an error may be thrown, explores what happens, and what can be done about it. </p>
     <p> Each card has a link to its source code (on <a target="blank" href="https://github.com/alexey-dc/react_koans/tree/main/view/fc_error_handling">GitHub</a>) at the top, as well as a summary of the setup. </p>
