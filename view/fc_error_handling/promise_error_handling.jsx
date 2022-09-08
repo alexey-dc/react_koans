@@ -9,8 +9,7 @@
 */
 
 import React from 'react'
-import ErrorBoundary from '../comp/error_boundary.jsx'
-import EventBus from '../../frontend_lib/event_bus.js'
+import ErrorBoundary from './error_boundary.jsx'
 // see https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/koan_api.js
 import KoanApi from '../../frontend_lib/koan_api.js'
 
@@ -29,14 +28,22 @@ const someDistantAsyncMethod = async () => {
   return await KoanApi.instance.alwaysError("Globally handled error")
 }
 
+class ErrorEvent extends Event {
+  constructor(data) {
+    super('global_error')
+    this._data = data
+  }
+
+  get data() {
+    return this._data
+  }
+}
+
 const triggerErrorWrapped = async () => {
   try {
     await someDistantAsyncMethod()
   } catch(e) {
-    EventBus.instance.fire({
-      kind: "global_error",
-      error: e
-    })
+    window.dispatchEvent(new ErrorEvent({error: e}))
   }
 }
 
@@ -48,14 +55,15 @@ const ErrorTrigger = () => {
     setIsError(!isError)
   })
 
-  React.useEffect(() => {
-    EventBus.instance.addHandler("global_error", (event) => {
-      setIsError(true)
-      setErrorMessage(event.error)
-    }, "promise_error_handling")
+  const errorHandler = React.useCallback((event) => {
+    setIsError(true)
+    setErrorMessage(event.data.error)
+  })
 
+  React.useEffect(() => {
+    window.addEventListener('global_error', errorHandler)
     return () => {
-      EventBus.instance.clear("promise_error_handling")
+      window.removeEventListener('global_error', errorHandler)
     }
   }, [])
 

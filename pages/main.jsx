@@ -18,9 +18,9 @@ export default function Main(props) {
     <p> The code is open souce, published under the <a target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL</a> on <a target="_blank" href="https://github.com/alexey-dc/react_koans">GitHub</a></p>
     <h1> Examples </h1>
     <ul className="large_li">
-      <li> <a href="/fc_error_handling"> Functional Component error handling </a> </li>
       <li> <a href="/hooks_store"> State sharing: Hooks </a> </li>
       <li> <a href="/zustand_state_share"> Application-wide state: Zustand </a> </li>
+      <li> <a href="/fc_error_handling"> Functional Component error handling </a> </li>
     </ul>
   </Layout>
 }

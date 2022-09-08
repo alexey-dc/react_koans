@@ -9,7 +9,6 @@
 */
 
 import React from 'react'
-import ErrorBoundary from '../comp/error_boundary.jsx'
 
 const ErrorTrigger = () => {
   const [isError, setIsError] = React.useState(false)

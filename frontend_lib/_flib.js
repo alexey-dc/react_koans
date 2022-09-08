@@ -8,10 +8,8 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-import EventBus from './event_bus.js'
 import HttpClient from './http_client.js'
 
 export default {
-  EventBus,
   HttpClient,
 }
