@@ -22,7 +22,7 @@ export const createOtherCounter = (set) => ({
       /*
         Note 2 things above this state update:
         1. We have to be explicitly aware of state in other slices -
-           i.e. there's not a dependency graph of values in Zutand's state like
+           i.e. there's not a dependency graph of values in Zustand's state like
            there is with react hooks.
 
         2. We have to explicitly pass in the new value - i.e., we can't do
