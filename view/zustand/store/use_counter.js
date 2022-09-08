@@ -8,14 +8,12 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-import BasicUsage from './basic_usage.jsx'
-import CrossComponents from './cross_components.jsx'
-import ShareAcrossStores from './share_across_stores.jsx'
-import SplitStores from './split_stores.jsx'
+import create from 'zustand'
 
-export default {
-  BasicUsage,
-  CrossComponents,
-  ShareAcrossStores,
-  SplitStores,
-}
+const useCounter = create(set => ({
+  counter: 0,
+  incr: () => set(state => ({ counter: state.counter + 1 })),
+  decr: () => set(state => ({ counter: state.counter - 1 }))
+}))
+
+export default useCounter

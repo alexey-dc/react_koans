@@ -1,3 +1,7 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// This demoes the Slices pattern https://github.com/pmndrs/zustand/blob/main/docs/guides/typescript.md#slices-pattern  //
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /*
   This file is part of ReactKoans https://github.com/alexey-dc/react_koans.
 
@@ -8,14 +12,14 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-import BasicUsage from './basic_usage.jsx'
-import CrossComponents from './cross_components.jsx'
-import ShareAcrossStores from './share_across_stores.jsx'
-import SplitStores from './split_stores.jsx'
+import { createCounter, createOtherCounter, createSum } from './state_functions.js'
 
-export default {
-  BasicUsage,
-  CrossComponents,
-  ShareAcrossStores,
-  SplitStores,
-}
+import create from 'zustand'
+
+const useComboStore = create((...a) => ({
+  ...createCounter(...a),
+  ...createOtherCounter(...a),
+  ...createSum(...a),
+}))
+
+export default useComboStore

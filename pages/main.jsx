@@ -19,8 +19,8 @@ export default function Main(props) {
     <h1> Examples </h1>
     <ul className="large_li">
       <li> <a href="/fc_error_handling"> Functional Component error handling </a> </li>
-      <li> <a href="/hooks_store"> State management/sharing: Hooks </a> </li>
-      <li> <a href="/zustand"> State management/sharing: Zustand </a> </li>
+      <li> <a href="/hooks_store"> State sharing: Hooks </a> </li>
+      <li> <a href="/zustand_state_share"> Application-wide state: Zustand </a> </li>
     </ul>
   </Layout>
 }

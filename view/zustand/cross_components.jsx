@@ -9,18 +9,18 @@
 */
 
 import React from 'react'
-import useBasicStore from './store/use_basic_store.js'
+import useCounter from './store/use_counter.js'
 
 const StatefulCrossComponent = () => {
-  const value = useBasicStore(state => state.demoInt)
-  const incr = useBasicStore(state => state.incr)
-  const decr = useBasicStore(state => state.decr)
+  const value = useCounter(state => state.counter)
+  const incr = useCounter(state => state.incr)
+  const decr = useCounter(state => state.decr)
 
   return <div className="f-row f-j-space-between">
     <div className="button" onClick={decr}>
       -
     </div>
-    <div className="f-col f-j-center">
+    <div className="f-col f-j-center" style={{color: 'green'}}>
       {value}
     </div>
     <div className="button" onClick={incr}>
@@ -34,7 +34,7 @@ const CrossComponents = () => {
     <a target="blank" title="Basic Zustand usage" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/cross_components.jsx"> Cross component </a>
     <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
       <li> Different component </li>
-      <li> Same <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/store/use_basic_store.js"> useBasicStore </a> </li>
+      <li> Same <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/store/use_counter.js"> useCounter </a> </li>
     </ul>
     <StatefulCrossComponent/>
   </div>

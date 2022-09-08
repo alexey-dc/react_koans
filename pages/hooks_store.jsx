@@ -52,7 +52,7 @@ export default function Main(props) {
       <p>React does not perscribe a way to share state across components.</p>
       <p>In particular, for functional components, there is no out-of-the-box hook that allows sharing application-wide state and ensuring its consistency.</p>
       <p>A basic solution for sharing state using hooks is presented above - but there are many solutions to the problem out there, varying in sophistication.</p>
-      <p><a href="/zustand">Zustand</a> is a minimal hook-based application state management framework. It's compatible with redux tools, and yet offers one of the most compact <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> implementations - for functional components. </p>
+      <p><a href="/zustand_state_share">Zustand</a> is a minimal hook-based application state management framework. It's compatible with redux tools, and yet offers one of the most compact <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> implementations - for functional components. </p>
     </section>
 
   </Layout>
