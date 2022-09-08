@@ -55,9 +55,8 @@ export default function Main(props) {
       <h2>Using Zustand state across stores</h2>
       <p>The problem with the example above is that data sources need to be aware of all their dependents, and update the dependents.</p>
       <p>This makes it harder to develop modular data structures - since new modules require updating old modules.</p>
-      <p>It's possible to reverse the relationship - by subscribing to Zustand state changes explicitly from dependent stores.</p>
-      <p>In this example, subscriptions are used to build a dependent Zustand store - liberating parent data sources from updating their dependents.</p>
-      <p>Notice that the <span style={{color: 'red'}}>red</span> value below matches the value at the top of the page: unlike useComboStore, this approach allows sharing state across unrelated stores (useSum and useCounter).</p>
+      <p>It's possible to reverse the relationship - by subscribing to Zustand state changes explicitly from dependent stores. In this example, subscriptions are used to build a self-updating dependent Zustand store - liberating parent data sources from needing to know about dependent values.</p>
+      <p>Notice that the <span style={{color: 'red'}}>red</span> value below matches the value at the top of the page: unlike useComboStore, this approach allows sharing state across unrelated stores that don't have direct access to each other's state (useSum and useCounter).</p>
       <div className="f-row f-wrap card_row">
         <Spaced>
           <views.ShareAcrossStores/>

@@ -23,7 +23,7 @@ export default function Main(props) {
   return <Layout title="Hooks and Application State" backPath="/">
     <section>
       <h1> Hooks and Application State </h1>
-      <p>Sharing state across components is one of the most common problems in React, since it does not come with an out-of-the-box solution.</p>
+      <p>Sharing state across components is one of the most common problems in React, since there is no out-of-the-box solution.</p>
       <p>There are countless approaches and paradigms: <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> and its <a target="_blank" href="https://github.com/voronianski/flux-comparison">countless implementations</a>, <a target="_blank" href="https://reactjs.org/docs/context.html">Context</a>, <a target="_blank" href="https://github.com/pmndrs/zustand">Zustand</a>, ...</p>
       <p>Functional components and hooks bring a new set of tools to the field, which further proliferates the possible approaches.</p>
       <p>This section explores navigating application state in React on top of functional components - without a state framework.</p>
@@ -49,9 +49,9 @@ export default function Main(props) {
 
     <section style={{marginBottom: "32vh"}}>
       <h1>Conclusions</h1>
-      <p>React does not perscribe a way to share state across components.</p>
-      <p>In particular, for functional components, there is no out-of-the-box hook that allows sharing application-wide state and ensuring its consistency.</p>
-      <p>A basic solution for sharing state using hooks is presented above - but there are many solutions to the problem out there, varying in sophistication.</p>
+      <p>React does not prescribe a way to share state across components.</p>
+      <p>In particular, for functional components, there is no out-of-the-box hook/solution that allows sharing state across the entire application while ensuring its consistency.</p>
+      <p>A basic approach to sharing state using hooks is presented above - but there are many more sophisticated solutions to the problem out there.</p>
       <p><a href="/zustand_state_share">Zustand</a> is a minimal hook-based application state management framework. It's compatible with redux tools, and yet offers one of the most compact <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> implementations - for functional components. </p>
     </section>
 

@@ -44,11 +44,11 @@ const SplitStores = () => {
   return <div className="card f-col f-j-space-between">
     <a target="blank" title="Splitting up Zustand stores with Slices pattern" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/split_stores.jsx"> Splitting up Zustand stores with the Slices pattern </a>
     <ul style={{paddingBottom: "2vh", paddingTop: "1vh"}}>
-      <li>Instantiates <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/store/use_combo_store.js"> useComboStore </a> </li>
-      <li>That store is assembled from functions defined across several files. </li>
       <li>This is an implementation of the <a target="_blank" href="https://github.com/pmndrs/zustand/blob/main/docs/guides/typescript.md#slices-pattern">Slices pattern</a>, recommended by Zustand.</li>
+      <li>Instantiates <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/store/use_combo_store.js"> useComboStore </a> </li>
+      <li>That store is assembled from functions that can be defined across multiple files. </li>
       <li>The counters below represent 2 different values in a compound store, and the third value is their sum.</li>
-      <li>With a naive implementation, the 2 basic values must know about their dependent value, and update the dependent value when they're changed.</li>
+      <li>With a naive implementation, the 2 basic values <a target="_blank" href="https://github.com/alexey-dc/react_koans/blob/main/view/zustand/store/state_functions.js#L23">must know about their dependent values</a>, and take responsibility for pushing updates to dependents.</li>
     </ul>
     <StatefulComponent/>
   </div>
