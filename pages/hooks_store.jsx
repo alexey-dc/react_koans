@@ -24,9 +24,9 @@ export default function Main(props) {
     <section>
       <h1> Hooks and Application State </h1>
       <p>Sharing state across components is one of the most common problems in React, since there is no out-of-the-box solution.</p>
-      <p>There are countless approaches and paradigms: <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> and its <a target="_blank" href="https://github.com/voronianski/flux-comparison">countless implementations</a>, <a target="_blank" href="https://reactjs.org/docs/context.html">Context</a>, <a target="_blank" href="https://github.com/pmndrs/zustand">Zustand</a>, ...</p>
-      <p>Functional components and hooks bring a new set of tools to the field, which further proliferates the possible approaches.</p>
-      <p>This section explores navigating application state in React on top of functional components - without a state framework.</p>
+      <p>There is a plethora of paradigms and libraries: <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> and its <a target="_blank" href="https://github.com/voronianski/flux-comparison">countless implementations</a>, <a target="_blank" href="https://reactjs.org/docs/context.html">Context</a>, <a target="_blank" href="https://github.com/pmndrs/zustand">Zustand</a>, ...</p>
+      <p>Functional components and hooks bring a new tools to the field, which further proliferates the possible approaches.</p>
+      <p>This section explores navigating application state in React on top of functional components and hooks - without a state framework.</p>
     </section>
 
     <section>

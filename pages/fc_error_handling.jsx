@@ -66,7 +66,7 @@ export default function Main(props) {
     </div>
     <h2> Conclusion </h2>
     <p> The hard problem in handling errors in functional components in React is dealing with errors from async functions/promises. </p>
-    <p> Two solutions are presented: via <a target="blank" href="https://www.npmjs.com/package/react-error-boundary">react-error-boundary</a> and via a <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/frontend_lib/event_bus.js#L17">global event mechanism</a>. </p>
+    <p> Two solutions are presented: via <a target="blank" href="https://www.npmjs.com/package/react-error-boundary">react-error-boundary</a> and via a <a target="blank" href="https://github.com/alexey-dc/react_koans/blob/main/view/fc_error_handling/promise_error_handling.jsx#L64">global event mechanism</a>. </p>
     <p> <b>react-error-boundary</b> can be a good way to take advantage of a standard global error handling mechanism on a per-component level. </p>
     <p> However, for general-purpose tools (e.g. an internal http client that wraps a backend API) that exist outside of components, or that would benefit from not having to think about error handling each time - it may make sense to opt for a global event mechanism to tie the world of react with the outside world.</p>
     <div style={{marginBottom: "30vh"}}> </div>
