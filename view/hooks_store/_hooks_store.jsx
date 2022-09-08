@@ -8,10 +8,11 @@
   You should have received a copy of the GNU Affero General Public License along with ReactKoans. If not, see <https://www.gnu.org/licenses/>.
 */
 
-import BasicUsage from './basic_usage.jsx'
-import CrossComponents from './cross_components.jsx'
+import NaiveStoreHooks from './naive_store_hooks.jsx'
+import SharedHookState from  './shared_hook_state.jsx'
+
 
 export default {
-  BasicUsage,
-  CrossComponents,
+  NaiveStoreHooks,
+  SharedHookState,
 }

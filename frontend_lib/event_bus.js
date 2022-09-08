@@ -49,7 +49,8 @@ class EventBus {
       return delete this.handlersByOwner[owner]
     }
     for(const info of this.handlersByOwner[owner]) {
-      // NOTE: don't call "this.remove": that modifies the array while iterating...
+      // NOTE: don't modify this.handlersByOwner[owner] while iterating...
+      // In particular, don't call this.remove(...)
       this.removeFromArray(this.handlers[info.kind], info.handler)
     }
     delete this.handlersByOwner[owner]
