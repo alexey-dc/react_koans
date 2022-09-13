@@ -19,7 +19,8 @@ export default function Main(props) {
     <h1> Examples </h1>
     <ul className="large_li">
       <li> <a href="/hooks_store"> State sharing: Hooks </a> </li>
-      <li> <a href="/zustand_state_share"> Application-wide state: Zustand </a> </li>
+      <li> <a href="/zustand_state_share"> Application-wide state in functional components: Zustand </a> </li>
+      <li> <a href="/zustand_persistence"> Client-side state persistence with Zustand </a> </li>
       <li> <a href="/fc_error_handling"> Functional Component error handling </a> </li>
     </ul>
   </Layout>

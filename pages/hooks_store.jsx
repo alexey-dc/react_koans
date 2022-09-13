@@ -25,12 +25,12 @@ export default function Main(props) {
       <h1> Hooks and Application State </h1>
       <p>Sharing state across components is one of the most common problems in React, since there is no out-of-the-box solution.</p>
       <p>There is a plethora of paradigms and libraries: <a target="_blank" href="https://reactjs.org/blog/2014/05/06/flux.html">Flux</a> and its <a target="_blank" href="https://github.com/voronianski/flux-comparison">countless implementations</a>, <a target="_blank" href="https://reactjs.org/docs/context.html">Context</a>, <a target="_blank" href="https://github.com/pmndrs/zustand">Zustand</a>, ...</p>
-      <p>Functional components and hooks bring a new tools to the field, which further proliferates the possible approaches.</p>
+      <p>Functional components and hooks bring new constraints and tools, further proliferating possible approaches.</p>
       <p>This section explores navigating application state in React on top of functional components and hooks - without a state framework.</p>
     </section>
 
     <section>
-      <h1> Diving in </h1>
+      <h1> Examples </h1>
       <h2> Raw hooks: the problem </h2>
       <p>Native react hooks - like useState - do not come with an out of the box way of sharing state across components</p>
       <p>The example below has 2 components that share a stateful hook; the data is not shared.</p>
