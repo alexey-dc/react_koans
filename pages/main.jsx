@@ -13,15 +13,15 @@ import Layout from '../view/layout.jsx'
 
 export default function Main(props) {
   return <Layout title="React Koans">
-    <h1> React Koans </h1>
-    <p> This is a collection of React <a target="_blank" href="https://en.wikipedia.org/wiki/Koan">Koans</a>: concise examples that explore standard and edge case behavior. </p>
-    <p> The code is open souce, published under the <a target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL</a> on <a target="_blank" href="https://github.com/alexey-dc/react_koans">GitHub</a></p>
-    <h1> Examples </h1>
+    <h1>React Koans</h1>
+    <p>This is a collection of React <a target="_blank" href="https://en.wikipedia.org/wiki/Koan">Koans</a>: concise examples that explore standard and edge case behavior.</p>
+    <p>The code is open sourced under the <a target="_blank" href="https://www.gnu.org/licenses/agpl-3.0.en.html">GNU AGPL</a> license, published on <a target="_blank" href="https://github.com/alexey-dc/react_koans">GitHub</a></p>
+    <h1>Examples</h1>
     <ul className="large_li">
-      <li> <a href="/hooks_store"> State sharing: Hooks </a> </li>
-      <li> <a href="/zustand_state_share"> Application-wide state in functional components: Zustand </a> </li>
-      <li> <a href="/zustand_persistence"> Client-side state persistence with Zustand </a> </li>
-      <li> <a href="/fc_error_handling"> Functional Component error handling </a> </li>
+      <li><a href="/hooks_store"> State sharing: Hooks </a></li>
+      <li><a href="/zustand_state_share"> Application-wide state in functional components: Zustand </a></li>
+      <li><a href="/zustand_persistence"> Client-side state persistence with Zustand </a></li>
+      <li><a href="/fc_error_handling"> Functional Component error handling </a></li>
     </ul>
   </Layout>
 }
